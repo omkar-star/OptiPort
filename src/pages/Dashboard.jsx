@@ -1,21 +1,23 @@
 import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { IoIosMore } from 'react-icons/io';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+// import { IoIosMore } from 'react-icons/io';
+// import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
-import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
-import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+import { Stacked, Pie, Button, SparkLine } from '../components';
+// LineChart,
+import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+// medicalproBranding, recentTransactions, weeklyStats, dropdownData,
 import { useStateContext } from '../contexts/ContextProvider';
-import product9 from '../data/product9.jpg';
+// import product9 from '../data/product9.jpg';
 
-const DropDown = ({ currentMode }) => (
-  <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
-    <DropDownListComponent id="time" fields={{ text: 'Time', value: 'Id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value="1" dataSource={dropdownData} popupHeight="220px" popupWidth="120px" />
-  </div>
-);
+// const DropDown = ({ currentMode }) => (
+//   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
+//     <DropDownListComponent id="time" fields={{ text: 'Time', value: 'Id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value="1" dataSource={dropdownData} popupHeight="220px" popupWidth="120px" />
+//   </div>
+// );
 
-const Ecommerce = () => {
+const Dashboard = () => {
   const { currentColor, currentMode } = useStateContext();
 
   return (
@@ -120,7 +122,7 @@ const Ecommerce = () => {
           </div>
         </div>
         <div>
-          <div
+          {/* <div
             className=" rounded-2xl md:w-400 p-4 m-3"
             style={{ backgroundColor: currentColor }}
           >
@@ -136,7 +138,7 @@ const Ecommerce = () => {
             <div className="mt-4">
               <SparkLine currentColor={currentColor} id="column-sparkLine" height="100px" type="Column" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
             </div>
-          </div>
+          </div> */}
 
           <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
             <div>
@@ -151,7 +153,7 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 m-4 flex-wrap justify-center">
+      {/* <div className="flex gap-10 m-4 flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
           <div className="flex justify-between items-center gap-2">
             <p className="text-xl font-semibold">Recent Transactions</p>
@@ -325,9 +327,9 @@ const Ecommerce = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Ecommerce;
+export default Dashboard;
