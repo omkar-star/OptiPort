@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { AiOutlineStock, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
+import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
@@ -486,15 +487,11 @@ export const links = [
     links: [
       {
         name: 'assets',
-        icon: <AiOutlineShoppingCart />,
+        icon: <FaRegMoneyBillAlt />,
       },
       {
         name: 'stocks',
-        icon: <IoMdContacts />,
-      },
-      {
-        name: 'customers',
-        icon: <RiContactsLine />,
+        icon: <AiOutlineStock />,
       },
     ],
   },

@@ -1,9 +1,9 @@
 export { default as Dashboard } from './Dashboard';
 export { default as Kanban } from './Kanban';
-export { default as Assets } from "./Assets";
+export { default as Assets } from './Assets';
 export { default as Stocks } from './Stocks';
 export { default as Editor } from './Editor';
-export { default as Customers } from './Customers';
+export { default as StockChartPage } from './StockChartPage';
 export { default as ColorPicker } from './ColorPicker';
 export { default as Calendar } from './Calendar';
 export { default as Area } from './Charts/Area';

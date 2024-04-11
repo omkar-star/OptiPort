@@ -1,11 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
-body{
-    margin: 0;
-    padding:0;
-    font-family: "Open Sans", sans-serif;
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.stocks-table {
+	border-collapse: collapse;
+	width: 100%; /* Adjust width as needed */
+}
+
+.stocks-table th,
+.stocks-table td {
+	padding: 10px;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+.stocks-table thead th {
+	background-color: #f2f2f2;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+.page-btn {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 5px; /* Adjust margin as needed */
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: #f2f2f2;
+}
