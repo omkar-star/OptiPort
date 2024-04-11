@@ -17,9 +17,18 @@ const Stocks = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const addToWatchlist = (stock) => {
-    setWatchlist([...watchlist, stock]);
-    setWatchlistInCookies(watchlist); // Update cookies with new watchlist
-    // console.log(`Added ${stock.Symbol} to watchlist`);
+    // Check if stock already exists in watchlist before adding
+    const alreadyInWatchlist = watchlist.find(
+      (item) => item.Symbol === stock.Symbol,
+    );
+
+    if (!alreadyInWatchlist) {
+      setWatchlist([...watchlist, stock]);
+      setWatchlistInCookies(watchlist); // Update cookies with new watchlist
+      console.log(`Added ${stock.Symbol} to watchlist`);
+    } else {
+      console.log(`${stock.Symbol} already exists in watchlist`); // Optional: Log message for existing stock
+    }
   };
 
   useEffect(() => {
