@@ -6,7 +6,7 @@ const StockChart = ({ stockData }) => {
   const [series, setSeries] = useState([]);
   const [options] = useState({
     chart: {
-      type: 'line',
+      type: 'area',
       stacked: false,
       height: 350,
       zoom: {

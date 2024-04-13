@@ -30,3 +30,23 @@ export const setWatchlistInCookies = (watchlist) => {
     console.error('Error setting watchlist in cookies:', error);
   }
 };
+
+export const optimizeWatchlist = (watchlist) => {
+  // Temp Logic for Optimizing watch list
+  const optimizedWatchlist = [];
+  const stockMap = new Map();
+
+  watchlist.forEach((stock) => {
+    const { Symbol, price } = stock;
+    const existingStock = stockMap.get(Symbol);
+
+    if (existingStock) {
+      existingStock.price = (existingStock.price + price) / 2; // Average price
+    } else {
+      stockMap.set(Symbol, { Symbol, price });
+    }
+  });
+
+  optimizedWatchlist.push(...stockMap.values());
+  return optimizedWatchlist;
+};

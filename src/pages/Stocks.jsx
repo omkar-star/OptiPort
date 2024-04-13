@@ -38,7 +38,7 @@ const Stocks = () => {
     }
   }, []);
 
-  // Search functionality (basic example, can be improved)
+  // Search functionality (Not working)
   const filteredStocks = data.filter((stock) => stock['Company Name'].toLowerCase().includes(searchQuery.toLowerCase()));
 
   const currentStocks = filteredStocks.slice(
@@ -56,8 +56,6 @@ const Stocks = () => {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       <table className="stocks-table">
-        {' '}
-        {/* Added class name for table */}
         <thead>
           <tr>
             <th>Company Name</th>
